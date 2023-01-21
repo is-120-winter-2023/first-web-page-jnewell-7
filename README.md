@@ -93,14 +93,28 @@ Modern browsers and mobile devices prefer PNG favicons, so it's best to include 
 - Change the path in the copied HTML to point to the files in your `images` folder by prepending the path with `images` The HTML in your `<head>` should look like this:
 
   ```html
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="manifest" href="images/site.webmanifest">
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="images/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="images/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="images/favicon-16x16.png"
+  />
+  <link rel="manifest" href="images/site.webmanifest" />
   ```
 
-| ⚠️ Check your formatting  |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ⚠️ Check your formatting                                                                                                                                                                                                                                                                                                                     |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | When you save your `index.html` file, check that your `<link>` tags do not end with a `/>` and are broken up into several lines. This means Prettier is formatting your HTML. If this is the case, you need to disable Prettier formatting for HTML. See the **Configure VS Code** page on Learning Suite for information on how to do this. |
 
 ### Configuring `<body>`
@@ -121,13 +135,14 @@ Before you open your webpage in Live Server, make sure all your files are saved,
 
 If you have errors or warnings, click on the icons to see what they are and fix them, and re-save your files.
 
-Once any problems are fixed,  either choose "Go Live" in the bottom right of the status bar, or find and select "Go Live" in `View -> Command Palette...` to view your webpage in a browser.
+Once any problems are fixed, either choose "Go Live" in the bottom right of the status bar, or find and select "Go Live" in `View -> Command Palette...` to view your webpage in a browser.
 
 Make sure that you can see your favicon in the browser tab. Sometimes favicon changes aren't loaded right away, so if you don't see your favicon, first try to _hard reload_ your page to see if that makes them appear.
 
-| 💡 How to hard reload a web page  |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
- To force a page reload, on Window, press `Ctrl`-`Shift`-`R`or `Ctrl`-`F5`; on Mac press `⌘`-`⇧`-`R`.
+| 💡 How to hard reload a web page |
+| :------------------------------- |
+
+To force a page reload, on Window, press `Ctrl`-`Shift`-`R`or `Ctrl`-`F5`; on Mac press `⌘`-`⇧`-`R`.
 
 If a hard reload doesn't work, check your image paths and make sure your files are in the right location.
 
@@ -157,15 +172,15 @@ Go back to your main repo page by selecting `Code` in the main menu. Click on th
 
 ![about settings](readme-assets/about.png)
 
- Enter a description of your repo and paste the web page URL. Click `Save changes`.
+Enter a description of your repo and paste the web page URL. Click `Save changes`.
 
- ![about config](readme-assets/about-config.png)
+![about config](readme-assets/about-config.png)
 
 ## Validate your HTML with validator.nu
 
-| 💡 Why validate? |
-|:-----|
-|Validating your HTML is an important step in making sure your page is well-formed, which helps with SEO and accessability. It also helps you find errors in your HTML that you may have missed in VS Code. **You should validate all your assignment files before checking the automated tests** (described below).|
+| 💡 Why validate?                                                                                                                                                                                                                                                                                                    |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Validating your HTML is an important step in making sure your page is well-formed, which helps with SEO and accessability. It also helps you find errors in your HTML that you may have missed in VS Code. **You should validate all your assignment files before checking the automated tests** (described below). |
 
 Once your page is live, use the [validator.nu](https://validator.nu/) service to validate your HTML. Select Show "outline" and "image report" then paste your page URL into the validator and click `Check`.
 
@@ -179,7 +194,7 @@ If you have any errors, fix them in VSCode, commit and sync, and then re-validat
 
 ## Pass automated tests
 
-I've add some Github actions and written some automated tests to pre-grade your assignments.  After you've ensured that your page has validated, open your repo in Github and check that you've passed the automated tests. Look at the top right of your repo header. If you have passed all the tests, you'll see a green check mark:
+I've add some Github actions and written some automated tests to pre-grade your assignments. After you've ensured that your page has validated, open your repo in Github and check that you've passed the automated tests. Look at the top right of your repo header. If you have passed all the tests, you'll see a green check mark:
 
 ![passed tests](readme-assets/pass.png)
 
@@ -189,9 +204,9 @@ If you failed any tests, you will see a red X. Click on the X to see which test 
 
 If you see a yellow dot, it means that the test is still running. Wait for the test to finish.
 
-| ⚠️ Advanced |
-|:-----|
-|The actions – validate and proof – are in a YAML file in the `.github/workflows` folder. If you want to see the code that runs the tests I wrote, you can look in the `tests` folder. The tests are written in JavaScript using the [Jest](https://jestjs.io/) testing framework. If you've worked with Node, you can run the tests in VS Code by installing the project with `npm install`. You can then run the tests with `npm test`)|
+| ⚠️ Advanced                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| The actions – validate and proof – are in a YAML file in the `.github/workflows` folder. If you want to see the code that runs the tests I wrote, you can look in the `tests` folder. The tests are written in JavaScript using the [Jest](https://jestjs.io/) testing framework. If you've worked with Node, you can run the tests in VS Code by installing the project with `npm install`. You can then run the tests with `npm test`) |
 
 ### Current automated tests
 
